@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sell your bike</title>
+</head>
+<body>
+
+
+<div class="container">
+    <form action="/inventory" method="POST">
+        <div class="form-group">
+            <label for="image">Image:</label>
+            <input type="text" name="image">
+        </div>
+        <div class="form-group">
+            <label for="brand">Brand:</label>
+<!--            <input type="text" id="brand" name="brand">--><span id="result" hidden></span>
+            <select name="brand" id="brand">
+                <option selected="selected">Honda</option>
+                <option>Kawasaki</option>
+                <option>Harley</option>
+                <option>Yamaha</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="type">Type:</label>
+            <select name="type" id="mySelect">
+
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="price">Price:</label>
+            <input type="number" name="price">
+        </div>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" name="name">
+        </div>
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea name="description"></textarea>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+
+</body>
+<script src="/js/javascript.js"></script>
+</html>

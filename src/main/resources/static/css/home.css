@@ -1,0 +1,156 @@
+html {
+    cursor: auto;
+  cursor: url(./pictures/moto.png) 0 0, auto;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 80%;
+    font-family: "Courier New", Courier, monospace;
+    letter-spacing: 0.15em;
+    background-color: black;
+    text-align: center;
+    margin-left: 0px;
+    margin-right: 25px;
+}
+.top_text {
+    text-align: center;
+}
+#page {
+    width: auto;
+    margin: 30px auto 0px auto;
+    padding: 20px;
+}
+#logo {
+    width: 30%;
+    margin: 50px auto 25px auto;
+}
+ul {
+    width: 100%;
+    padding: 20px;
+    margin: 0px auto 0px auto;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    text-align: center;
+    text-decoration-style: solid;
+}
+li {
+    text-align: center;
+    color: white;
+    display: inline;
+    margin: 0px 3px;
+}
+a {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0px 0px 0px 18px;
+}
+a:hover {
+    color: #cc3333;
+}
+p {
+    font-size: 15px;
+    font-family: "Courier New", Courier, monospace;
+    color: white;
+    text-align: center;
+}
+.footer {
+    clear: both;
+    padding: 0px 10px;
+}
+.footer p {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 120%;
+    text-align: center;
+}
+.header {
+    padding: 0px 0px 0px 0px;
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    margin: 0;
+    z-index: 50;
+}
+.nav {
+    float: left;
+    font-family: "Courier New", Courier, monospace;
+    padding: 45px 0px 0px 0px;
+    text-align: center;
+    color: white;
+}
+.footer-text {
+    padding: 15px;
+    background-color: #edb4e2;
+    color: black;
+}
+.footer-text-box {
+    padding: 15px;
+    color: white;
+}
+h2 {
+    color: white;
+}
+ol {
+
+    list-style: lower-roman;
+    text-align: right;
+}
+h1 {
+    color: white;
+    font-family: "Courier New", Courier, monospace;
+}
+input.MyButton {
+    float: center;
+    width: 1000px;
+    padding: 30px 0px, 90px, 0px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 150%;
+    background: black;
+    color: silver;
+    border-style: outset;
+    border-radius: 10px;
+    -moz-box-shadow:: 6px 6px 5px #999;
+    -webkit-box-shadow:: 6px 6px 5px #999;
+    box-shadow:: 6px 6px 5px #999;
+}
+input.MyButton:hover {
+    color: #cc3333;
+    background: #000;
+    border: 1px solid #fff;
+}
+.footer {
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: -25px;
+    clear: both;
+    padding: 0px 10px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+.footer p {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 120%;
+    text-align: center;
+}
+.footer-text {
+    padding: 15px;
+    background-color: #edb4e2;
+    color: black;
+}
+.footer-text-box {
+    padding: 15px;
+    color: white;
+}
+.navigation p {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+
