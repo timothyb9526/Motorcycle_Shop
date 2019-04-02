@@ -1,54 +1,180 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sell your bike</title>
+    <title>
+        Motorcycle Club
+    </title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/960gs/0/960.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="/css/newBike.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/home.css">
 </head>
+
 <body>
 
 
-<div class="container">
-    <form action="/inventory" method="POST">
-        <div class="form-group">
-            <label for="image">Image:</label>
-            <input type="text" name="image">
-        </div>
-        <div class="form-group">
-            <label for="brand">Brand:</label>
-<!--            <input type="text" id="brand" name="brand">--><span id="result" hidden></span>
-            <select name="brand" id="brand">
-                <option selected="selected">Honda</option>
-                <option>Kawasaki</option>
-                <option>Harley</option>
-                <option>Yamaha</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="type">Type:</label>
-            <select name="type" id="mySelect">
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav p-3">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Honda |<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Kawasaki |</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Harley |</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Yamaha |</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="price">Price:</label>
-            <input type="number" name="price">
-        </div>
-        <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" name="name">
-        </div>
-        <div class="form-group">
-            <label for="description">Description:</label>
-            <textarea name="description"></textarea>
-        </div>
-        <button type="submit">Submit</button>
-    </form>
+<div id="image" class="container-lg">
+    <div class="col-12 row">
+
+        <span class="mx-auto"><img src="/pictures/images.png" alt="Bowles Honda" /></span>
+
+    </div>
 </div>
 
+<div id="page">
 
+    <div>
+        <ul id="navigation">
+            <li>
+                <a href="/" class="on">Home</a>
+            </li>
+            <li>
+                <a href="#">New Showcase</a>
+            </li>
+            <li>
+                <a href="/inventory">Inventory</a>
+            </li>
+            <li>
+                <a href="#">Services</a>
+            </li>
+            <li>
+                <a href="/BikeForSale">Sell your bike</a>
+            </li>
+            <li>
+                <a href="#">Submit a Review</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div>
+
+    <div id="jobForm" class="container border border-dark rounded bg-white">
+        <form action="/inventory" method="POST">
+            <div class="form-group">
+                <label for="image">Image:</label>
+                <input type="text" name="image">
+            </div>
+            <div class="form-group">
+                <label for="brand">Brand:</label>
+                <select name="brand" id="brand">
+                    <option selected="selected">Honda</option>
+                    <option>Kawasaki</option>
+                    <option>Harley</option>
+                    <option>Yamaha</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="type">Type:</label>
+                <select name="type" id="mySelect">
+
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="price">Price:</label>
+                <input type="number" name="price">
+            </div>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" name="name">
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea name="description"></textarea>
+            </div>
+            <button class="btn" type="submit">Submit</button>
+        </form>
+    </div>
+
+
+</div>
+<div class="footer">
+    <div class="container_12">
+        <div class="grid_4">
+            <p class="footer-text">
+                <b>Address</b>
+                <br> 301 N Main St
+                <br> Water Valley, MS 38965
+            </p>
+            <p class="footer-text">
+                <b>Contact</b>
+                <br> Call 555.555.1234
+                <br> to set up a service appointment.
+            </p>
+        </div>
+        <div class="grid_12">
+            <h2>About Us</h2>
+            <p>
+                Welcome to Diamond Motors, the place where you can get the best deal on any Honda, Yamaha, Kawasaki, and Harley vehicles
+                to fit your needs.
+            </p>
+        </div>
+        <div>
+
+            <ol id="navigation">
+                <li>
+                    <a href="web.html">Home</a>
+                </li>
+                <br>
+                <li>
+                    <a href="new_showcase.html">New Showcase</a>
+                </li>
+                <br>
+                <li>
+                    <a href="#">Inventory</a>
+                </li>
+                <br>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <br>
+                <li>
+                    <a href="#">Submit a Review</a>
+                </li>
+                <br>
+                <li>
+                    <a href="terms.html">Terms and Conditions</a>
+                </li>
+                <br>
+                <li>
+                    <a href="privacy.html">Privacy Policy</a>
+                </li>
+                <br>
+            </ol>
+
+        </div>
+    </div>
+
+    <div class=" container_12 ">
+        <p class="grid_12 ">
+            <a href=" ">Legal Information</a> |
+            <a href="privacy.html">Privacy Policy</a> |
+            <a href=" ">Copyright</a>
+        </p>
+    </div>
+</div>
 </body>
 <script src="/js/javascript.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </html>

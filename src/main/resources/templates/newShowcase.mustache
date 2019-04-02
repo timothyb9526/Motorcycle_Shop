@@ -69,31 +69,18 @@
 
     <div id="bikes" class="container">
 
-        <ul class="nav nav-pills mb-3 border-bottom" id="pills-tab" role="tablist">
-            <li class="nav-item">
-                <a class="nav-link" id="honda-tab"  href="/inventory/Honda" role="tab" aria-controls="honda">Honda</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="kawasaki-tab" href="/inventory/Kawasaki" role="tab" aria-controls="kawasaki">Kawasaki</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="harley-tab"  href="/inventory/Harley" role="tab" aria-controls="harley">Harley</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="yamaha-tab"  href="/inventory/Yamaha" role="tab" aria-controls="yamaha">Yamaha</a>
-            </li>
-        </ul>
         {{^bikes}}
             <h3>NO BIKES</h3>
         {{/bikes}}
         <div class="row">
-        {{#bikes}}
-        <div class="col-6 p-3">
-            <img src="{{image}}" width="100%" height="90%" alt="#">
-            <h3>{{name}}</h3>
-            <p class="text-secondary">${{price}} *base MSRP*</p>
-        </div>
-        {{/bikes}}
+            {{#bikes}}
+                <div class="col-6 p-3">
+                    <img src="{{image}}" width="100%" height="90%" alt="#">
+                    <h3>{{name}}</h3>
+                    {{date}}
+                    <p class="text-secondary">${{price}} *base MSRP*</p>
+                </div>
+            {{/bikes}}
         </div>
     </div>
 

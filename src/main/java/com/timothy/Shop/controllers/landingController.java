@@ -6,8 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.util.UUID;
 
 @Controller
 @RequestMapping("/")
@@ -26,9 +29,16 @@ public class landingController {
         return "landing";
     }
 
+
     @GetMapping("/BikeForSale")
     public String bikeForSale() {
         return "newBike";
+    }
+
+    @GetMapping("/newShowcase")
+    public String newShowcase(Model model) {
+        model.addAttribute("bikes", repository.sortByDate());
+        return "newShowcase";
     }
 
     @GetMapping("/inventory")
@@ -43,6 +53,13 @@ public class landingController {
         model.addAttribute("bikes", repository.findAll());
         return "inventory";
     }
+
+    @GetMapping("/inventory/{brand}")
+    public String findByBrand(Model model, @PathVariable(value = "brand") String brand) {
+        model.addAttribute("bikes", repository.findByBrand(brand));
+        return "inventory";
+    }
+
 
 
 }

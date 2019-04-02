@@ -7,23 +7,44 @@ html {
     margin: 0;
     padding: 0;
 }
+
+
+#image {
+
+    margin-top: 7rem;
+
+}
+
 body {
     font-size: 80%;
-    font-family: "Courier New", Courier, monospace;
     letter-spacing: 0.15em;
     background-color: black;
-    text-align: center;
     margin-left: 0px;
     margin-right: 25px;
 }
+
+nav {
+
+    background-color: black;
+
+}
+
 .top_text {
     text-align: center;
 }
 #page {
-    width: auto;
-    margin: 30px auto 0px auto;
-    padding: 20px;
+    text-align: center;
+    width: 101.6%;
+    margin: 30px auto 30px 0px;
 }
+
+#page ul {
+
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+
+}
+
 #logo {
     width: 30%;
     margin: 50px auto 25px auto;
@@ -32,10 +53,6 @@ ul {
     width: 100%;
     padding: 20px;
     margin: 0px auto 0px auto;
-    border-top: 2px solid white;
-    border-bottom: 2px solid white;
-    text-align: center;
-    text-decoration-style: solid;
 }
 li {
     text-align: center;
@@ -59,6 +76,7 @@ p {
     text-align: center;
 }
 .footer {
+    text-align: center;
     clear: both;
     padding: 0px 10px;
 }
@@ -75,13 +93,6 @@ p {
     top: 0px;
     margin: 0;
     z-index: 50;
-}
-.nav {
-    float: left;
-    font-family: "Courier New", Courier, monospace;
-    padding: 45px 0px 0px 0px;
-    text-align: center;
-    color: white;
 }
 .footer-text {
     padding: 15px;
@@ -100,7 +111,7 @@ ol {
     list-style: lower-roman;
     text-align: right;
 }
-h1 {
+h3 {
     color: white;
     font-family: "Courier New", Courier, monospace;
 }
@@ -147,10 +158,9 @@ input.MyButton:hover {
     padding: 15px;
     color: white;
 }
-.navigation p {
-    padding-top: 20px;
-    padding-bottom: 20px;
+
+#bikes {
+
+    text-align: center;
+
 }
-
-
-

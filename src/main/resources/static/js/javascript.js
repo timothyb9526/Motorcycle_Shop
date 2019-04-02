@@ -9,7 +9,7 @@ var yamaha = ["Motorcross", "Cross country", "Trail", "Sport", "Naked", "Heritag
 makeDropdown(honda);
 
  y.oninput = function() {
-    result.innerHTML = y.value;
+
     if (y.value.toLowerCase() == "honda") {
         x.innerHTML = "";
         makeDropdown(honda)
@@ -27,7 +27,7 @@ makeDropdown(honda);
         makeDropdown(yamaha)
 
     }
-    console.log(result.innerHTML);
+
   };
 
 function makeDropdown(list) {

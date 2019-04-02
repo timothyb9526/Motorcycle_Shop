@@ -35,7 +35,7 @@ public class Bike {
         String dateInString = new SimpleDateFormat(pattern).format(new Date());
 
         this.id = id;
-        this.brand = brand;
+        this.brand = brand.toLowerCase();
         this.type = type;
         this.image = image;
         this.price = price;

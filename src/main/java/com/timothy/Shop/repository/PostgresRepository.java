@@ -31,6 +31,14 @@ public class PostgresRepository {
         return jdbc.query("SELECT id, brand, type, image, price, name, description, date FROM bike ORDER BY name ASC", this::mapRowToStory);
     }
 
+    public List<Bike> findByBrand(String brand) {
+        return jdbc.query("SELECT id, brand, type, image, price, name, description, date FROM bike where brand = ? ORDER BY name ASC", this::mapRowToStory, brand);
+    }
+
+    public List<Bike> sortByDate() {
+        return jdbc.query("SELECT id, brand, type, image, price, name, description, date FROM bike ORDER BY date ASC LIMIT 4", this::mapRowToStory);
+    }
+
     private Bike mapRowToStory(ResultSet rs, int rowNum) throws SQLException {
         return new Bike(UUID.fromString(rs.getString("id")), rs.getString("brand"), rs.getString("type"), rs.getString("image"),
                 rs.getInt("price"), rs.getString("name"), rs.getString("description"), rs.getString("date"));
