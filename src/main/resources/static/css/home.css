@@ -137,7 +137,6 @@ input.MyButton:hover {
 }
 .footer {
     margin-top: 50px;
-    margin-left: 20px;
     margin-right: -25px;
     clear: both;
     padding: 0px 10px;
@@ -160,7 +159,14 @@ input.MyButton:hover {
 }
 
 #bikes {
-
     text-align: center;
+}
 
+#bikes a:hover {
+
+    background-color: #6c757d;
+
+}
+.dropdown {
+    margin-left: 20rem;
 }

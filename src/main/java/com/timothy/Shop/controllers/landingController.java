@@ -60,6 +60,78 @@ public class landingController {
         return "inventory";
     }
 
+    @GetMapping("/inventory/2/{type}")
+    public String findBytype(Model model, @PathVariable(value = "type") String type) {
+        model.addAttribute("bikes", repository.findByType(type));
+        return "inventory";
+    }
 
+    @GetMapping("/Honda")
+    public String findHonda(Model model) {
+        model.addAttribute("bikes", repository.findByBrand("Honda"));
+        return "Honda";
+    }
+
+    @GetMapping("/Kawasaki")
+    public String findKawasaki(Model model) {
+        model.addAttribute("bikes", repository.findByBrand("Kawasaki"));
+        return "Kawasaki";
+    }
+    @GetMapping("/Harley")
+    public String findHarley(Model model) {
+        model.addAttribute("bikes", repository.findByBrand("Harley"));
+        return "Harley";
+    }
+    @GetMapping("/Yamaha")
+    public String findYamaha(Model model) {
+        model.addAttribute("bikes", repository.findByBrand("Yamaha"));
+        return "Yamaha";
+    }
+
+    @GetMapping("/Honda/{type}")
+    public String findBybrandType(Model model, @PathVariable(value = "type") String type) {
+        model.addAttribute("bikes", repository.findByBrandType("Honda", type));
+        return "Honda";
+    }
+    @GetMapping("/Kawasaki/{type}")
+    public String findByKawasakiType(Model model, @PathVariable(value = "type") String type) {
+        model.addAttribute("bikes", repository.findByBrandType("Kawasaki", type));
+        return "Kawasaki";
+    }
+    @GetMapping("/Harley/{type}")
+    public String findByHarleyType(Model model, @PathVariable(value = "type") String type) {
+        model.addAttribute("bikes", repository.findByBrandType("Harley", type));
+        return "Harley";
+    }
+    @GetMapping("/Yamaha/{type}")
+    public String findByYamahaType(Model model, @PathVariable(value = "type") String type) {
+        model.addAttribute("bikes", repository.findByBrandType("Yamaha", type));
+        return "Yamaha";
+    }
+
+    @GetMapping("/Honda/2/{price}")
+    public String findPriceByHonda(Model model, @PathVariable(value = "price") String price) {
+        model.addAttribute("bikes", repository.findByBrandPrice("Honda", price));
+        return "Honda";
+    }
+    @GetMapping("/Kawasaki/2/{price}")
+    public String findPriceByKawasaki(Model model, @PathVariable(value = "price") String price) {
+        model.addAttribute("bikes", repository.findByBrandPrice("Kawasaki", price));
+        return "Kawasaki";
+    }@GetMapping("/Harley/2/{price}")
+    public String findPriceByHarley(Model model, @PathVariable(value = "price") String price) {
+        model.addAttribute("bikes", repository.findByBrandPrice("Harley", price));
+        return "Harley";
+    }@GetMapping("/Yamaha/2/{price}")
+    public String findPriceByYamaha(Model model, @PathVariable(value = "price") String price) {
+        model.addAttribute("bikes", repository.findByBrandPrice("Yamaha", price));
+        return "Yamaha";
+    }
+
+    @GetMapping("/inventory/3/{price}")
+    public String findByPrice(Model model, @PathVariable(value = "price") String price) {
+        model.addAttribute("bikes", repository.findByPrice(price));
+        return "inventory";
+    }
 
 }

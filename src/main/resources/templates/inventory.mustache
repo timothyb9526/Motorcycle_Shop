@@ -67,21 +67,64 @@
 </div>
 <div>
 
-    <div id="bikes" class="container">
+    <div id="bikes">
 
-        <ul class="nav nav-pills mb-3 border-bottom" id="pills-tab" role="tablist">
-            <li class="nav-item">
-                <a class="nav-link" id="honda-tab"  href="/inventory/Honda" role="tab" aria-controls="honda">Honda</a>
+        <ul class="nav pl-3 mb-3 border-bottom" id="pills-tab" role="tablist">
+            <li class="nav-item border border-left-0 border-top-0 border-bottom-0 pr-3 mr-3">
+                <a href="/inventory" class="nav-link bg-secondary rounded">All Brands</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="kawasaki-tab" href="/inventory/Kawasaki" role="tab" aria-controls="kawasaki">Kawasaki</a>
+                    <a class="nav-link bg-secondary rounded" id="honda-tab"  href="/inventory/Honda" role="tab" aria-controls="honda">Honda</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="harley-tab"  href="/inventory/Harley" role="tab" aria-controls="harley">Harley</a>
+                    <a class="nav-link bg-secondary rounded" id="kawasaki-tab"  href="/inventory/Kawasaki" role="tab" aria-controls="kawasaki">Kawasaki</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="yamaha-tab"  href="/inventory/Yamaha" role="tab" aria-controls="yamaha">Yamaha</a>
+                    <a class="nav-link bg-secondary rounded" id="harley-tab"  href="/inventory/Harley" role="tab" aria-controls="harley">Harley</a>
             </li>
+            <li class="nav-item">
+                    <a class="nav-link bg-secondary rounded" id="yamaha-tab"  href="/inventory/Yamaha" role="tab" aria-controls="yamaha">Yamaha</a>
+            </li>
+            <div class="dropdown" style="margin-left: 33rem;">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Price
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="/inventory/3/2000">Less than 2000</a>
+                    <a class="dropdown-item" href="/inventory/3/5000">Less than 5000</a>
+                    <a class="dropdown-item" href="/inventory/3/10000">Less than 10000</a>
+                    <a class="dropdown-item" href="/inventory/3/30000">Less than 30000</a>
+                    <a class="dropdown-item" href="/inventory/3/50000">Less than 50000</a>
+                    <a class="dropdown-item" href="/inventory/3/70000">Less than 70000</a>
+                    <a class="dropdown-item" href="/inventory/3/100000">Less than 100000</a>
+                    <a class="dropdown-item" href="/inventory/3/200000">Less than 200000</a>
+                </div>
+            </div>
+            <div class="dropright ml-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Types
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="/inventory/2/Touring">Touring</a>
+                    <a class="dropdown-item" href="/inventory/2/Adventure">Adventure</a>
+                    <a class="dropdown-item" href="/inventory/2/Cruiser">Cruiser</a>
+                    <a class="dropdown-item" href="/inventory/2/Standard">Standard</a>
+                    <a class="dropdown-item" href="/inventory/2/Sport">Sport</a>
+                    <a class="dropdown-item" href="/inventory/2/Neo-SportsCafe">Neo-Sports cafe</a>
+                    <a class="dropdown-item" href="/inventory/2/MiniMoto">MiniMoto</a>
+                    <a class="dropdown-item" href="/inventory/2/Nakes">Naked</a>
+                    <a class="dropdown-item" href="/inventory/2/Off-Road">Off-Road</a>
+                    <a class="dropdown-item" href="/inventory/2/MotorCross">Motorcross</a>
+                    <a class="dropdown-item" href="/inventory/2/Cross-Country">Cross-Country</a>
+                    <a class="dropdown-item" href="/inventory/2/Trail">Trail</a>
+                    <a class="dropdown-item" href="/inventory/2/Heritage">Heritage</a>
+                    <a class="dropdown-item" href="/inventory/2/Street">Street</a>
+                    <a class="dropdown-item" href="/inventory/2/Sportster">Sportster</a>
+                    <a class="dropdown-item" href="/inventory/2/Softail">Softail</a>
+                    <a class="dropdown-item" href="/inventory/2/Trike">Trike</a>
+                    <a class="dropdown-item" href="/inventory/2/CVO">CVO</a>
+                </div>
+            </div>
         </ul>
         {{^bikes}}
             <h3>NO BIKES</h3>
@@ -90,8 +133,9 @@
         {{#bikes}}
         <div class="col-6 p-3">
             <img src="{{image}}" width="100%" height="90%" alt="#">
-            <h3>{{name}}</h3>
-            <p class="text-secondary">${{price}} *base MSRP*</p>
+            <h3>{{brand}}</h3>
+            <p>{{price}}</p>
+            <p class="text-secondary">{{type}}</p>
         </div>
         {{/bikes}}
         </div>
