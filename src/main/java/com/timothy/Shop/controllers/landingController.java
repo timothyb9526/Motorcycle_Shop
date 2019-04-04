@@ -1,7 +1,9 @@
 package com.timothy.Shop.controllers;
 
 import com.timothy.Shop.model.Bike;
+import com.timothy.Shop.model.Review;
 import com.timothy.Shop.repository.PostgresRepository;
+import com.timothy.Shop.repository.ReviewRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,10 +19,12 @@ import java.util.UUID;
 public class landingController {
 
     PostgresRepository repository;
+    ReviewRepository reviewRepo;
 
     @Autowired
-    public landingController(PostgresRepository repo){
+    public landingController(PostgresRepository repo, ReviewRepository review){
         repository = repo;
+         reviewRepo = review;
 
     }
 
@@ -35,6 +39,24 @@ public class landingController {
         return "newBike";
     }
 
+    @GetMapping("/SubmitReview")
+    public String bikeShopReview() {
+        return "review";
+    }
+
+    @GetMapping("/reviews")
+    public String reviews(Model model) {
+        model.addAttribute("reviews", reviewRepo.findAll());
+        return "reviews";
+    }
+
+    @PostMapping("/reviews")
+    public String PostReviews(Model model, Review review) {
+        reviewRepo.save(review);
+        model.addAttribute("reviews", reviewRepo.findAll());
+        return "reviews";
+    }
+
     @GetMapping("/newShowcase")
     public String newShowcase(Model model) {
         model.addAttribute("bikes", repository.sortByDate());
@@ -45,6 +67,11 @@ public class landingController {
     public String inventory(Model model) {
         model.addAttribute("bikes", repository.findAll());
         return "inventory";
+    }
+
+    @GetMapping("/services")
+    public String services() {
+        return "services";
     }
 
     @PostMapping("/inventory")

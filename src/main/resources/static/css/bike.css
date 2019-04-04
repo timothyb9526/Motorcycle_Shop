@@ -1,0 +1,25 @@
+.honda {
+    background-image: url("/pictures/honda.png");
+    background-repeat: no-repeat;
+    background-size: 140px 100px;
+    background-position: right;
+}
+
+.kawasaki {
+    background-image: url("/pictures/kawasaki-racing-png-logo-2.png");
+    background-repeat: no-repeat;
+    background-size: 140px 100px;
+    background-position: right;
+}
+.harley {
+    background-image: url("/pictures/Harley-Davidson_logo.svg.png");
+    background-repeat: no-repeat;
+    background-size: 140px 100px;
+    background-position: right;
+}
+.yamaha {
+    background-image: url("/pictures/y-logo.png");
+    background-repeat: no-repeat;
+    background-size: 140px 100px;
+    background-position: right;
+}

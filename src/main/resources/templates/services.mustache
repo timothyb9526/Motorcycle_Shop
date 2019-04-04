@@ -7,21 +7,20 @@
     </title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/960gs/0/960.css" type="text/css" rel="stylesheet" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="/css/home.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/css/bike.css">
+    <link href="/css/home.css" rel="stylesheet"/>
 </head>
 
 <body>
 
 
-<nav class="kawasaki navbar navbar-expand-lg fixed-top">
+<nav class="navbar navbar-expand-lg fixed-top">
     <div class="collapse navbar-collapse">
         <ul class="navbar-nav p-3">
             <li class="nav-item active">
-                <a class="nav-link" href="/Honda">Honda |</a>
+                <a class="nav-link" href="/Honda">Honda |<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/Kawasaki">Kawasaki |<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/Kawasaki">Kawasaki |</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/Harley">Harley |</a>
@@ -36,7 +35,7 @@
 <div id="image" class="container-lg">
     <div class="col-12 row">
 
-        <span class="mx-auto"><img src="/pictures/images.png" alt="Bowles Honda" /></span>
+        <span class="mx-auto"><img src="pictures/images.png" alt="Bowles Honda" /></span>
 
     </div>
 </div>
@@ -66,63 +65,92 @@
         </ul>
     </div>
 </div>
-<div>
-
-    <div id="bikes">
-
-        <ul class="nav pl-3 mb-3 border-bottom" id="pills-tab" role="tablist">
-            <li class="nav-item border border-left-0 border-top-0 border-bottom-0 pr-3 mr-3">
-                <a href="/Kawasaki" class="nav-link bg-secondary rounded">All Types</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link bg-secondary rounded" href="/Kawasaki/Sport" role="tab">Sport</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link bg-secondary rounded" href="/Kawasaki/Naked" role="tab">Naked</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link bg-secondary rounded" href="/Kawasaki/Adventure" role="tab">Adventure</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link bg-secondary rounded" href="/Kawasaki/Touring" role="tab">Touring</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link bg-secondary rounded" href="/Kawasaki/Cruiser" role="tab">Cruiser</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link bg-secondary rounded" href="/Kawasaki/off-road" role="tab">off-road</a>
-            </li>
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Price
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="/Kawasaki/2/2000">Less than 2000</a>
-                    <a class="dropdown-item" href="/Kawasaki/2/5000">Less than 5000</a>
-                    <a class="dropdown-item" href="/Kawasaki/2/10000">Less than 10000</a>
-                    <a class="dropdown-item" href="/Kawasaki/2/30000">Less than 30000</a>
-                    <a class="dropdown-item" href="/Kawasaki/2/50000">Less than 50000</a>
-                    <a class="dropdown-item" href="/Kawasaki/2/70000">Less than 70000</a>
-                    <a class="dropdown-item" href="/Kawasaki/2/100000">Less than 100000</a>
-                    <a class="dropdown-item" href="/Kawasaki/2/200000">Less than 200000</a>
-                </div>
-            </div>
-        </ul>
-        {{^bikes}}
-            <h3>NO BIKES</h3>
-        {{/bikes}}
-        <div class="row">
-            {{#bikes}}
-                <div class="col-6 p-3">
-                    <img src="{{image}}" width="100%" height="90%" alt="#">
-                    <h3>{{brand}}</h3>
-                    <p>{{price}}</p>
-                    <p class="text-secondary">{{type}}</p>
-                </div>
-            {{/bikes}}
-        </div>
+<div class="container">
+    <div class="text-light border border-top-0 border-left-0 border-right-0 mb-3"><h3>Factory Scheduled Maintenance</h3></div>
+    <div class="d-flex">
+        <p id="name">Oil Change Only (All)</p>
+        <p>$70.00</p>
     </div>
-
+    <div class="d-flex">
+        <p id="name">Minor/Major Service</p>
+        <p>$200.00 - $450.00</p>
+    </div>
+    <div class="text-light border border-top-0 border-left-0 border-right-0 mb-3"><h3>Mounting</h3></div>
+    <div class="d-flex">
+        <p id="name">HD/Custom New Tire Mount Carry in</p>
+        <p>$33.00</p>
+    </div>
+    <div class="d-flex">
+        <p id="name">New M/C Tire Mount Carry in</p>
+        <p>$20.00</p>
+    </div>
+    <div class="d-flex">
+        <p id="name">Offroad Tire MC Swap</p>
+        <p>$35.00</p>
+    </div>
+    <div class="d-flex">
+        <p id="name">New M/C Tire Mount Carry in with Rim Lock</p>
+        <p>$25.00</p>
+    </div>
+    <div class="text-light border border-top-0 border-left-0 border-right-0 mb-3"><h3>Tires and Wheels</h3></div>
+    <div class="d-flex">
+        <p id="name">Dirt Bike Tire/Tube Change</p>
+        <p>$60.00</p>
+    </div>
+    <div class="d-flex">
+        <p id="name">Sport Bike Tire Change</p>
+        <p>Front: $60.00 Rear: $80.00</p>
+    </div>
+    <div class="d-flex">
+        <p id="name">Cruiser/Touring Bike Tire/Tube Change</p>
+        <p>Front: $80.00 Rear: $100.00</p>
+    </div>
+    <div class="text-light border border-top-0 border-left-0 border-right-0 mb-3"><h3>Truing and Lacing Wheels</h3></div>
+    <div class="d-flex">
+        <p id="name">True/Lace off the bike(per wheel)</p>
+        <p>$200.00</p>
+    </div>
+    <div class="d-flex">
+        <p id="name">True/Lace on the bike(per wheel)</p>
+        <p>$250.00 - $350.00</p>
+    </div>
+    <div class="text-light border border-top-0 border-left-0 border-right-0 mb-3"><h3>Brakes</h3></div>
+    <div class="d-flex">
+        <p id="name">Brake Pads</p>
+        <p>$50.00 - $120.00</p>
+    </div>
+    <div class="text-light border border-top-0 border-left-0 border-right-0 mb-3"><h3>Drive</h3></div>
+    <div class="d-flex">
+        <p id="name">Chain Service - clean, lube, adjust</p>
+        <p>$50.00</p>
+    </div>
+    <div class="d-flex">
+        <p id="name">Chain Replacement (new)</p>
+        <p>$50.00</p>
+    </div>
+    <div class="text-light border border-top-0 border-left-0 border-right-0 mb-3"><h3>Suspension</h3></div>
+    <div class="d-flex">
+        <p id="name">fork seal replacement(both)</p>
+        <p>$300.00</p>
+    </div>
+    <div class="text-light border border-top-0 border-left-0 border-right-0 mb-3"><h3>Fuel System</h3></div>
+    <div class="d-flex">
+        <p id="name">Carb Clean/Fuel Flush - ATV, Dirt Bike, SXS</p>
+        <p>$135.00 - $180.00</p>
+    </div>
+    <div class="d-flex">
+        <p id="name">Carb Clean/Fuel Flush - Cruiser</p>
+        <p>$300.00</p>
+    </div>
+    <div class="d-flex">
+        <p id="name">Carb Clean/Fuel Flush - Sport Bike</p>
+        <p>$450.00</p>
+    </div>
+    <div class="text-light border border-top-0 border-left-0 border-right-0 mb-3"><h3>Body Damage</h3></div>
+    <div class="d-flex">
+        <p id="name">Collision estimate only</p>
+        <p>$200.00</p>
+    </div>
 </div>
 <div class="footer">
     <div class="container_12">
@@ -179,13 +207,13 @@
     <div class=" container_12 ">
         <p class="grid_12 ">
             <a href=" ">Legal Information</a> |
-            <a href="privacy.html">Privacy Policy</a> |
+            <a hr
+               ef="privacy.html">Privacy Policy</a> |
             <a href=" ">Copyright</a>
         </p>
     </div>
 </div>
 </body>
-<script src="/js/inventory.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

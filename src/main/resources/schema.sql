@@ -10,3 +10,10 @@ CREATE TABLE IF NOT EXISTS bike (
 );
 
 
+CREATE TABLE IF NOT EXISTS review (
+    id UUID PRIMARY KEY,
+    name TEXT,
+    rating FLOAT,
+    date TEXT,
+    review TEXT
+);

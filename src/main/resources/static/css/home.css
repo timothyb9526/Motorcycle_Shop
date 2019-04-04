@@ -26,7 +26,6 @@ body {
 nav {
 
     background-color: black;
-
 }
 
 .top_text {
@@ -81,7 +80,6 @@ p {
     padding: 0px 10px;
 }
 .footer p {
-    font-family: "Courier New", Courier, monospace;
     font-size: 120%;
     text-align: center;
 }
@@ -113,7 +111,6 @@ ol {
 }
 h3 {
     color: white;
-    font-family: "Courier New", Courier, monospace;
 }
 input.MyButton {
     float: center;
@@ -143,20 +140,6 @@ input.MyButton:hover {
     border-top: 2px solid white;
     border-bottom: 2px solid white;
 }
-.footer p {
-    font-family: "Courier New", Courier, monospace;
-    font-size: 120%;
-    text-align: center;
-}
-.footer-text {
-    padding: 15px;
-    background-color: #edb4e2;
-    color: black;
-}
-.footer-text-box {
-    padding: 15px;
-    color: white;
-}
 
 #bikes {
     text-align: center;
@@ -169,4 +152,8 @@ input.MyButton:hover {
 }
 .dropdown {
     margin-left: 20rem;
+}
+
+#name {
+    margin-right: auto;
 }

@@ -8,26 +8,25 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/960gs/0/960.css" type="text/css" rel="stylesheet" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="/css/home.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/css/bike.css">
 </head>
 
 <body>
 
 
-<nav class="yamaha navbar navbar-expand-lg fixed-top">
+<nav class="navbar navbar-expand-lg fixed-top">
     <div class="collapse navbar-collapse">
         <ul class="navbar-nav p-3">
             <li class="nav-item active">
-                <a class="nav-link" href="/Honda">Honda |</a>
+                <a class="nav-link" href="#">Honda |<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/Kawasaki">Kawasaki |</a>
+                <a class="nav-link" href="#">Kawasaki |</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/Harley">Harley |</a>
+                <a class="nav-link" href="#">Harley |</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/Yamaha">Yamaha |<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#">Yamaha |</a>
             </li>
         </ul>
     </div>
@@ -67,65 +66,19 @@
     </div>
 </div>
 <div>
-
-    <div id="bikes"Yamaha>
-
-        <ul class="nav pl-3 mb-3 border-bottom" id="pills-tab" role="tablist">
-            <li class="nav-item border border-left-0 border-top-0 border-bottom-0 pr-3 mr-3">
-                <a href="/Yamaha" class="nav-link bg-secondary rounded">All Types</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link bg-secondary rounded" href="/Yamaha/Motorcross" role="tab">Motorcross</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link bg-secondary rounded" href="/Yamaha/Crosscountry" role="tab">Cross country</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link bg-secondary rounded" href="/Yamaha/Trail" role="tab">Trail</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link bg-secondary rounded" href="/Yamaha/Sport" role="tab">Sport</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link bg-secondary rounded" href="/Yamaha/Naked" role="tab">Naked</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link bg-secondary rounded" href="/Yamaha/Heritage" role="tab">Heritage</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link bg-secondary rounded" href="/Yamaha/Touring" role="tab">Touring</a>
-            </li>
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Price
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="/Yamaha/2/2000">Less than 2000</a>
-                    <a class="dropdown-item" href="/Yamaha/2/5000">Less than 5000</a>
-                    <a class="dropdown-item" href="/Yamaha/2/10000">Less than 10000</a>
-                    <a class="dropdown-item" href="/Yamaha/2/30000">Less than 30000</a>
-                    <a class="dropdown-item" href="/Yamaha/2/50000">Less than 50000</a>
-                    <a class="dropdown-item" href="/Yamaha/2/70000">Less than 70000</a>
-                    <a class="dropdown-item" href="/Yamaha/2/100000">Less than 100000</a>
-                    <a class="dropdown-item" href="/Yamaha/2/200000">Less than 200000</a>
-                </div>
+    <div id="reviews" class="container">
+        {{^reviews}}
+            <h1>No Reviews</h1>
+        {{/reviews}}
+        {{#reviews}}
+            <div class="d-flex border border-top-0 border-left-0 border-right-0 mb-3">
+                <h3 id="name">{{name}}</h3>
+                <h3>{{rating}}/5</h3>
             </div>
-        </ul>
-        {{^bikes}}
-            <h3>NO BIKES</h3>
-        {{/bikes}}
-        <div class="row">
-            {{#bikes}}
-                <div class="col-6 p-3">
-                    <img src="{{image}}" width="100%" height="90%" alt="#">
-                    <h3>{{brand}}</h3>
-                    <p>{{price}}</p>
-                    <p class="text-secondary">{{type}}</p>
-                </div>
-            {{/bikes}}
-        </div>
+            <p>{{review}}</p>
+            <p>Posted On: {{date}}</p>
+        {{/reviews}}
     </div>
-
 </div>
 <div class="footer">
     <div class="container_12">
@@ -152,19 +105,23 @@
 
             <ol id="navigation">
                 <li>
-                    <a href="web.html">Home</a>
+                    <a href="/" class="on">Home</a>
                 </li>
                 <br>
                 <li>
-                    <a href="new_showcase.html">New Showcase</a>
+                    <a href="/newShowcase">New Showcase</a>
                 </li>
                 <br>
                 <li>
-                    <a href="/services">Inventory</a>
+                    <a href="/inventory">Inventory</a>
                 </li>
                 <br>
                 <li>
-                    <a href="#">Services</a>
+                    <a href="/services">Services</a>
+                </li>
+                <br>
+                <li>
+                    <a href="/BikeForSale">Sell your bike</a>
                 </li>
                 <br>
                 <li>
