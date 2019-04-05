@@ -6,7 +6,13 @@ CREATE TABLE IF NOT EXISTS bike (
     price INTEGER,
     name TEXT,
     description TEXT,
-    date TEXT
+    date TEXT,
+    year Text,
+    city TEXT,
+    state TEXT,
+    color TEXT,
+    mileage INTEGER,
+    condition TEXT
 );
 
 

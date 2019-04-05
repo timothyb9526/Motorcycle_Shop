@@ -117,10 +117,11 @@
         <div class="row">
             {{#bikes}}
                 <div class="col-6 p-3">
-                    <img src="{{image}}" width="100%" height="90%" alt="#">
-                    <h3>{{brand}}</h3>
-                    <p>{{price}}</p>
-                    <p class="text-secondary">{{type}}</p>
+                    <a href="/{{id}}">
+                        <img src="{{image}}" width="100%" height="90%" alt="#">
+                        <h3>${{price}}</h3>
+                        <p class="text-secondary">{{type}}</p>
+                    </a>
                 </div>
             {{/bikes}}
         </div>
@@ -181,9 +182,9 @@
 
     <div class=" container_12 ">
         <p class="grid_12 ">
-            <a href=" ">Legal Information</a> |
-            <a href="privacy.html">Privacy Policy</a> |
-            <a href=" ">Copyright</a>
+            <a href="">Legal Information</a> |
+            <a href="">Privacy Policy</a> |
+            <a href="">Copyright</a>
         </p>
     </div>
 </div>

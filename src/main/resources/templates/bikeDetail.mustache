@@ -7,7 +7,7 @@
     </title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/960gs/0/960.css" type="text/css" rel="stylesheet" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="/css/home.css" rel="stylesheet" />
+    <link href="/css/home.css" rel="stylesheet"/>
 </head>
 
 <body>
@@ -17,16 +17,16 @@
     <div class="collapse navbar-collapse">
         <ul class="navbar-nav p-3">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Honda |<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/Honda">Honda |<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Kawasaki |</a>
+                <a class="nav-link" href="/Kawasaki">Kawasaki |</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Harley |</a>
+                <a class="nav-link" href="/Harley">Harley |</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Yamaha |</a>
+                <a class="nav-link" href="/Yamaha">Yamaha |</a>
             </li>
         </ul>
     </div>
@@ -35,7 +35,7 @@
 <div id="image" class="container-lg">
     <div class="col-12 row">
 
-        <span class="mx-auto"><img src="/pictures/images.png" alt="Bowles Honda" /></span>
+        <span class="mx-auto"><img src="pictures/images.png" alt="Bowles Honda" /></span>
 
     </div>
 </div>
@@ -65,20 +65,27 @@
         </ul>
     </div>
 </div>
-<div>
-    <div id="reviews" class="container">
-        {{^reviews}}
-            <h1>No Reviews</h1>
-        {{/reviews}}
-        {{#reviews}}
-            <div class="d-flex border border-top-0 border-left-0 border-right-0 mb-3">
-                <h3 id="name">{{name}}</h3>
-                <h3>{{rating}}/5</h3>
-            </div>
-            <p>{{review}}</p>
-            <p>Posted On: {{date}}</p>
-        {{/reviews}}
-    </div>
+<div id="detail" class="container">
+    {{^bike}}
+        <h1>Bike Not Found</h1>
+    {{/bike}}
+    {{#bike}}
+        <img src="{{image}}" width="100%" alt="#">
+        <h1>Bike Info</h1>
+        <div class="grid-container">
+            <p class="grid-item">Brand: {{brand}}</p>
+            <p class="grid-item">Type: {{type}}</p>
+            <p class="grid-item">Price: {{price}}</p>
+            <p class="grid-item">Name: {{name}}</p>
+            <p class="grid-item">year: {{year}}</p>
+            <p class="grid-item">Location: {{city}}, {{state}}</p>
+            <p class="grid-item">color: {{color}}</p>
+            <p class="grid-item">mileage: {{mileage}}</p>
+            <p class="grid-item">condition: {{condition}}</p>
+        </div>
+        <h1>Description</h1>
+        <p>{{description}}</p>
+    {{/bike}}
 </div>
 <div class="footer">
     <div class="container_12">
@@ -141,7 +148,6 @@
     </div>
 </div>
 </body>
-<script src="/js/inventory.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

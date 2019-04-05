@@ -69,6 +69,12 @@ public class landingController {
         return "inventory";
     }
 
+    @GetMapping("/{uuid}")
+    public String detail(Model model, @PathVariable(value = "uuid") UUID id) {
+        model.addAttribute("bike", repository.findByID(id));
+        return "bikeDetail";
+    }
+
     @GetMapping("/services")
     public String services() {
         return "services";

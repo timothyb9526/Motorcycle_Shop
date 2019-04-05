@@ -27,9 +27,22 @@ public class Bike {
     public String description;
     @NotNull
     public String date;
+    @NotNull
+    public String year;
+    @NotNull
+    public String city;
+    @NotNull
+    public String state;
+    @NotNull
+    public String color;
+    @NotNull
+    public Integer mileage;
+    @NotNull
+    public String condition;
 
 
-    public Bike(UUID id, String brand, String type, String image, Integer price, String name, String description, String date) {
+
+    public Bike(UUID id, String brand, String type, String image, Integer price, String name, String description, String date, String year, String city, String state, String color, int mileage, String condition) {
 
         String pattern = "dd-MM-yyyy";
         String dateInString = new SimpleDateFormat(pattern).format(new Date());
@@ -42,6 +55,12 @@ public class Bike {
         this.name = name;
         this.description = description;
         this.date = dateInString;
+        this.year = year;
+        this.city = city;
+        this.state = state;
+        this.color = color;
+        this.mileage = mileage;
+        this.condition = condition;
     }
 
 
