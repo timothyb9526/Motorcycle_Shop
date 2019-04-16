@@ -1,40 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>
         Motorcycle Club
     </title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/960gs/0/960.css" type="text/css" rel="stylesheet" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="/css/newBike.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/home.css">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg fixed-top">
-    <div class="collapse navbar-collapse">
-        <ul class="navbar-nav p-3">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Honda |<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Kawasaki |</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Harley |</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Yamaha |</a>
-            </li>
+<nav  class="navbar navbar-expand-lg sticky-top">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="container collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <div class="d-flex">
+
+                <li class="nav-item active">
+                    <p><a class="nav-link" href="/Honda">Honda <span class="seperator">|</span><span class="sr-only">(current)</span></a></p>
+                </li>
+
+                <li class="nav-item">
+                    <p><a class="nav-link" href="/Kawasaki">Kawasaki <span class="seperator">|</span></a></p>
+                </li>
+                <li class="nav-item">
+                    <p><a class="nav-link" href="/Harley">Harley <span class="seperator">|</span></a></p>
+                </li>
+                <li class="nav-item">
+                    <p><a class="nav-link" href="/Yamaha">Yamaha <span class="seperator">|</span></a></p>
+                </li>
+
+            </div>
         </ul>
     </div>
 </nav>
+
 <div id="image" class="container-lg">
-    <div class="col-12 row">
-        <span class="mx-auto"><img src="/pictures/images.png" alt="Bowles Honda" /></span>
+    <div class="container">
+
+        <span class="mx-auto"><img src="pictures/images.png" alt="Bowles Honda" /></span>
+
     </div>
 </div>
+
 <div id="page">
-    <div>
+
+    <div id="list">
         <ul id="navigation">
             <li>
                 <a href="/" class="on">Home</a>
@@ -56,17 +73,33 @@
             </li>
         </ul>
     </div>
+    <div id="select" class="container">
+        <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Menu
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a href="/" class="dropdown-item">Home</a>
+                <a href="/newShowcase" class="dropdown-item">New Showcase</a>
+                <a href="/inventory" class="dropdown-item">Inventory</a>
+                <a href="/services" class="dropdown-item">Services</a>
+                <a href="/BikeForSale" class="dropdown-item">Sell your bike</a>
+                <a href="/SubmitReview" class="dropdown-item">Submit a Review</a>
+            </div>
+        </div>
+    </div>
 </div>
-<div>
+<div class="container">
     <div id="Form" class="container border border-dark rounded bg-white">
         <form action="/inventory" method="POST">
             <div class="form-group">
                 <label for="image">Image:</label>
-                <input type="text" name="image">
+                <input type="text" name="image" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="brand">Brand:</label>
-                <select name="brand" id="brand">
+                <select name="brand" id="brand" class="form-control" required>
                     <option selected="selected">Honda</option>
                     <option>Kawasaki</option>
                     <option>Harley</option>
@@ -75,12 +108,12 @@
             </div>
             <div class="form-group">
                 <label for="type">Type:</label>
-                <select name="type" id="mySelect">
+                <select name="type" id="mySelect" class="form-control" required>
                 </select>
             </div>
             <div class="form-group">
                 <label for="year">Year:</label>
-                <input type="text" name="year">
+                <input type="text" name="year" class="form-control" required>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
@@ -115,35 +148,35 @@
             </div>
             <div class="form-group">
                 <label for="color">Color:</label>
-                <input type="text" name="color">
+                <input type="text" name="color" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="mileage">Mileage:</label>
-                <input type="number" name="mileage">
+                <input type="number" name="mileage" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="condition">Condition:</label>
-                <input type="text" name="condition">
+                <input type="text" name="condition" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="price">Price:</label>
-                <input type="number" name="price">
+                <input type="number" name="price" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="name">Name:</label>
-                <input type="text" name="name">
+                <input type="text" name="name" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="description">Description:</label>
-                <textarea name="description"></textarea>
+                <textarea name="description" class="form-control" required></textarea>
             </div>
             <button class="btn" type="submit">Submit</button>
         </form>
     </div>
 </div>
 <div class="footer">
-    <div class="container_12">
-        <div class="grid_4">
+    <div>
+        <div>
             <p class="footer-text">
                 <b>Address</b>
                 <br> 301 N Main St
@@ -155,14 +188,8 @@
                 <br> to set up a service appointment.
             </p>
         </div>
-        <div class="grid_12">
-            <h2>About Us</h2>
-            <p>
-                Welcome to Diamond Motors, the place where you can get the best deal on any Honda, Yamaha, Kawasaki, and Harley vehicles
-                to fit your needs.
-            </p>
-        </div>
         <div>
+
             <ol id="navigation">
                 <li>
                     <a href="/" class="on">Home</a>
@@ -188,10 +215,19 @@
                     <a href="/SubmitReview">Submit a Review</a>
                 </li>
             </ol>
+
+        </div>
+        <div>
+            <h2>About Us</h2>
+            <p>
+                Welcome to Diamond Motors, the place where you can get the best deal on any Honda, Yamaha, Kawasaki, and Harley vehicles
+                to fit your needs.
+            </p>
         </div>
     </div>
-    <div class=" container_12 ">
-        <p class="grid_12 ">
+
+    <div class="container">
+        <p>
             <a href="">Legal Information</a> |
             <a href="">Privacy Policy</a> |
             <a href="">Copyright</a>

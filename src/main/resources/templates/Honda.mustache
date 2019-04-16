@@ -2,10 +2,13 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>
         Motorcycle Club
     </title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/960gs/0/960.css" type="text/css" rel="stylesheet" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="/css/home.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/bike.css">
@@ -13,37 +16,45 @@
 
 <body>
 
+<nav  class="navbar navbar-expand-lg sticky-top">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-<nav class="honda navbar navbar-expand-lg fixed-top">
-    <div class="collapse navbar-collapse">
-        <ul class="navbar-nav p-3">
-            <li class="nav-item active">
-                <a class="nav-link" href="/Honda">Honda |<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/Kawasaki">Kawasaki |</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/Harley">Harley |</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/Yamaha">Yamaha |</a>
-            </li>
+    <div class="container collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <div class="d-flex">
+
+                <li class="nav-item active">
+                    <p><a class="nav-link" href="/Honda">Honda <span class="seperator">|</span><span class="sr-only">(current)</span></a></p>
+                </li>
+
+                <li class="nav-item">
+                    <p><a class="nav-link" href="/Kawasaki">Kawasaki <span class="seperator">|</span></a></p>
+                </li>
+                <li class="nav-item">
+                    <p><a class="nav-link" href="/Harley">Harley <span class="seperator">|</span></a></p>
+                </li>
+                <li class="nav-item">
+                    <p><a class="nav-link" href="/Yamaha">Yamaha <span class="seperator">|</span></a></p>
+                </li>
+
+            </div>
         </ul>
     </div>
 </nav>
 
 <div id="image" class="container-lg">
-    <div class="col-12 row">
+    <div class="container">
 
-        <span class="mx-auto"><img src="/pictures/images.png" alt="Bowles Honda" /></span>
+        <span class="mx-auto"><img src="pictures/images.png" alt="Bowles Honda" /></span>
 
     </div>
 </div>
 
 <div id="page">
 
-    <div>
+    <div id="list">
         <ul id="navigation">
             <li>
                 <a href="/" class="on">Home</a>
@@ -65,36 +76,69 @@
             </li>
         </ul>
     </div>
+    <div id="select" class="container">
+        <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Menu
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a href="/" class="dropdown-item">Home</a>
+                <a href="/newShowcase" class="dropdown-item">New Showcase</a>
+                <a href="/inventory" class="dropdown-item">Inventory</a>
+                <a href="/services" class="dropdown-item">Services</a>
+                <a href="/BikeForSale" class="dropdown-item">Sell your bike</a>
+                <a href="/SubmitReview" class="dropdown-item">Submit a Review</a>
+            </div>
+        </div>
+    </div>
 </div>
 <div>
 
     <div id="bikes">
 
         <ul class="nav pl-3 mb-3 border-bottom" id="pills-tab" role="tablist">
-            <li class="nav-item border border-left-0 border-top-0 border-bottom-0 pr-3 mr-3">
-                <a href="/Honda" class="nav-link bg-secondary rounded">All Types</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link bg-secondary rounded" href="/Honda/Touring" role="tab">Touring</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link bg-secondary rounded" href="/Honda/Adventure" role="tab">Adventure</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link bg-secondary rounded" href="/Honda/Cruiser" role="tab">Cruiser</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link bg-secondary rounded" href="/Honda/Standard" role="tab">Standard</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link bg-secondary rounded" href="/Honda/Sport" role="tab">Sport</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link bg-secondary rounded" href="/Honda/Neo-Sport-Cafe" role="tab">Neo-Sport-Cafe</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link bg-secondary rounded" href="/Honda/MiniMoto" role="tab">MiniMoto</a>
-            </li>
+            <div id="list">
+                <li class="nav-item border border-left-0 border-top-0 border-bottom-0 pr-3 mr-3">
+                    <a href="/Honda" class="nav-link bg-secondary rounded">All Types</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link bg-secondary rounded" href="/Honda/Touring" role="tab">Touring</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link bg-secondary rounded" href="/Honda/Adventure" role="tab">Adventure</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link bg-secondary rounded" href="/Honda/Cruiser" role="tab">Cruiser</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link bg-secondary rounded" href="/Honda/Standard" role="tab">Standard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link bg-secondary rounded" href="/Honda/Sport" role="tab">Sport</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link bg-secondary rounded" href="/Honda/Neo-Sport-Cafe" role="tab">Neo-Sport-Cafe</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link bg-secondary rounded" href="/Honda/MiniMoto" role="tab">MiniMoto</a>
+                </li>
+            </div>
+            <div id="menu">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Types
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a href="/Honda" class="nav-link bg-secondary rounded">All Types</a>
+                        <a class="nav-link bg-secondary rounded" href="/Honda/Touring" role="tab">Touring</a>
+                        <a class="nav-link bg-secondary rounded" href="/Honda/Adventure" role="tab">Adventure</a>
+                        <a class="nav-link bg-secondary rounded" href="/Honda/Cruiser" role="tab">Cruiser</a>
+                        <a class="nav-link bg-secondary rounded" href="/Honda/Standard" role="tab">Standard</a>
+                        <a class="nav-link bg-secondary rounded" href="/Honda/Sport" role="tab">Sport</a>
+                        <a class="nav-link bg-secondary rounded" href="/Honda/Neo-Sport-Cafe" role="tab">Neo-Sport-Cafe</a>
+                        <a class="nav-link bg-secondary rounded" href="/Honda/MiniMoto" role="tab">MiniMoto</a>
+                </div>
+            </div>
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Price
@@ -129,8 +173,8 @@
 
 </div>
 <div class="footer">
-    <div class="container_12">
-        <div class="grid_4">
+    <div>
+        <div>
             <p class="footer-text">
                 <b>Address</b>
                 <br> 301 N Main St
@@ -140,13 +184,6 @@
                 <b>Contact</b>
                 <br> Call 555.555.1234
                 <br> to set up a service appointment.
-            </p>
-        </div>
-        <div class="grid_12">
-            <h2>About Us</h2>
-            <p>
-                Welcome to Diamond Motors, the place where you can get the best deal on any Honda, Yamaha, Kawasaki, and Harley vehicles
-                to fit your needs.
             </p>
         </div>
         <div>
@@ -178,10 +215,17 @@
             </ol>
 
         </div>
+        <div>
+            <h2>About Us</h2>
+            <p>
+                Welcome to Diamond Motors, the place where you can get the best deal on any Honda, Yamaha, Kawasaki, and Harley vehicles
+                to fit your needs.
+            </p>
+        </div>
     </div>
 
-    <div class=" container_12 ">
-        <p class="grid_12 ">
+    <div class="container">
+        <p>
             <a href="">Legal Information</a> |
             <a href="">Privacy Policy</a> |
             <a href="">Copyright</a>

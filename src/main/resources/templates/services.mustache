@@ -2,38 +2,49 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>
         Motorcycle Club
     </title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/960gs/0/960.css" type="text/css" rel="stylesheet" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="/css/home.css" rel="stylesheet"/>
 </head>
 
 <body>
 
+<nav  class="navbar navbar-expand-lg sticky-top">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-<nav class="navbar navbar-expand-lg fixed-top">
-    <div class="collapse navbar-collapse">
-        <ul class="navbar-nav p-3">
-            <li class="nav-item active">
-                <a class="nav-link" href="/Honda">Honda |<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/Kawasaki">Kawasaki |</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/Harley">Harley |</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/Yamaha">Yamaha |</a>
-            </li>
+    <div class="container collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <div class="d-flex">
+
+                <li class="nav-item active">
+                    <p><a class="nav-link" href="/Honda">Honda <span class="seperator">|</span><span class="sr-only">(current)</span></a></p>
+                </li>
+
+                <li class="nav-item">
+                    <p><a class="nav-link" href="/Kawasaki">Kawasaki <span class="seperator">|</span></a></p>
+                </li>
+                <li class="nav-item">
+                    <p><a class="nav-link" href="/Harley">Harley <span class="seperator">|</span></a></p>
+                </li>
+                <li class="nav-item">
+                    <p><a class="nav-link" href="/Yamaha">Yamaha <span class="seperator">|</span></a></p>
+                </li>
+
+            </div>
         </ul>
     </div>
 </nav>
 
 <div id="image" class="container-lg">
-    <div class="col-12 row">
+    <div class="container">
 
         <span class="mx-auto"><img src="pictures/images.png" alt="Bowles Honda" /></span>
 
@@ -42,7 +53,7 @@
 
 <div id="page">
 
-    <div>
+    <div id="list">
         <ul id="navigation">
             <li>
                 <a href="/" class="on">Home</a>
@@ -64,97 +75,113 @@
             </li>
         </ul>
     </div>
+    <div id="select" class="container">
+        <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Menu
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a href="/" class="dropdown-item">Home</a>
+                <a href="/newShowcase" class="dropdown-item">New Showcase</a>
+                <a href="/inventory" class="dropdown-item">Inventory</a>
+                <a href="/services" class="dropdown-item">Services</a>
+                <a href="/BikeForSale" class="dropdown-item">Sell your bike</a>
+                <a href="/SubmitReview" class="dropdown-item">Submit a Review</a>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="container">
     <div class="text-light border border-top-0 border-left-0 border-right-0 mb-3"><h3>Factory Scheduled Maintenance</h3></div>
-    <div class="d-flex">
-        <p id="name">Oil Change Only (All)</p>
-        <p>$70.00</p>
+    <div class="grid-container d-flex">
+        <p class="grid-item" id="name">Oil Change Only (All)</p>
+        <p class="grid-item" id="price">$70.00</p>
     </div>
-    <div class="d-flex">
-        <p id="name">Minor/Major Service</p>
-        <p>$200.00 - $450.00</p>
+    <div class="grid-container d-flex">
+        <p class="grid-item" id="name">Minor/Major Service</p>
+        <p class="grid-item" id="price">$200.00 - $450.00</p>
     </div>
     <div class="text-light border border-top-0 border-left-0 border-right-0 mb-3"><h3>Mounting</h3></div>
-    <div class="d-flex">
-        <p id="name">HD/Custom New Tire Mount Carry in</p>
-        <p>$33.00</p>
+    <div class="grid-container d-flex">
+        <p class="grid-item" id="name">HD/Custom New Tire Mount Carry in</p>
+        <p class="grid-item" id="price">$33.00</p>
     </div>
-    <div class="d-flex">
-        <p id="name">New M/C Tire Mount Carry in</p>
-        <p>$20.00</p>
+    <div class="grid-container d-flex">
+        <p class="grid-item" id="name">New M/C Tire Mount Carry in</p>
+        <p class="grid-item" id="price">$20.00</p>
     </div>
-    <div class="d-flex">
-        <p id="name">Offroad Tire MC Swap</p>
-        <p>$35.00</p>
+    <div class="grid-container d-flex">
+        <p class="grid-item" id="name">Offroad Tire MC Swap</p>
+        <p class="grid-item" id="price">$35.00</p>
     </div>
-    <div class="d-flex">
-        <p id="name">New M/C Tire Mount Carry in with Rim Lock</p>
-        <p>$25.00</p>
+    <div class="grid-container d-flex">
+        <p class="grid-item" id="name">New M/C Tire Mount Carry in with Rim Lock</p>
+        <p class="grid-item" id="price">$25.00</p>
     </div>
     <div class="text-light border border-top-0 border-left-0 border-right-0 mb-3"><h3>Tires and Wheels</h3></div>
-    <div class="d-flex">
-        <p id="name">Dirt Bike Tire/Tube Change</p>
-        <p>$60.00</p>
+    <div class="grid-container d-flex">
+        <p class="grid-item" id="name">Dirt Bike Tire/Tube Change</p>
+        <p class="grid-item" id="price">$60.00</p>
     </div>
-    <div class="d-flex">
-        <p id="name">Sport Bike Tire Change</p>
-        <p>Front: $60.00 Rear: $80.00</p>
+    <div class="grid-container d-flex">
+        <p class="grid-item" id="name">Sport Bike Tire Change</p>
+        <p class="grid-item" id="price">Front: $60.00 Rear: $80.00</p>
     </div>
-    <div class="d-flex">
-        <p id="name">Cruiser/Touring Bike Tire/Tube Change</p>
-        <p>Front: $80.00 Rear: $100.00</p>
+    <div class="grid-container d-flex">
+        <p class="grid-item" id="name">Cruiser/Touring Bike Tire/Tube Change</p>
+        <p class="grid-item" id="price">Front: $80.00 Rear: $100.00</p>
     </div>
     <div class="text-light border border-top-0 border-left-0 border-right-0 mb-3"><h3>Truing and Lacing Wheels</h3></div>
-    <div class="d-flex">
-        <p id="name">True/Lace off the bike(per wheel)</p>
-        <p>$200.00</p>
+    <div class="grid-container d-flex">
+        <p class="grid-item" id="name">True/Lace off the bike(per wheel)</p>
+        <p class="grid-item" id="price">$200.00</p>
     </div>
-    <div class="d-flex">
-        <p id="name">True/Lace on the bike(per wheel)</p>
-        <p>$250.00 - $350.00</p>
+    <div class="grid-container d-flex">
+        <p class="grid-item" id="name">True/Lace on the bike(per wheel)</p>
+        <p class="grid-item" id="price">$250.00 - $350.00</p>
     </div>
     <div class="text-light border border-top-0 border-left-0 border-right-0 mb-3"><h3>Brakes</h3></div>
-    <div class="d-flex">
-        <p id="name">Brake Pads</p>
-        <p>$50.00 - $120.00</p>
+    <div class="grid-container d-flex">
+        <p class="grid-item" id="name">Brake Pads</p>
+        <p class="grid-item" id="price">$50.00 - $120.00</p>
     </div>
     <div class="text-light border border-top-0 border-left-0 border-right-0 mb-3"><h3>Drive</h3></div>
-    <div class="d-flex">
-        <p id="name">Chain Service - clean, lube, adjust</p>
-        <p>$50.00</p>
+    <div class="grid-container d-flex">
+        <p class="grid-item" id="name">Chain Service - clean, lube, adjust</p>
+        <p class="grid-item" id="price">$50.00</p>
     </div>
-    <div class="d-flex">
-        <p id="name">Chain Replacement (new)</p>
-        <p>$50.00</p>
+    <div class="grid-container d-flex">
+        <p class="grid-item" id="name">Chain Replacement (new)</p>
+        <p class="grid-item" id="price">$50.00</p>
     </div>
     <div class="text-light border border-top-0 border-left-0 border-right-0 mb-3"><h3>Suspension</h3></div>
-    <div class="d-flex">
-        <p id="name">fork seal replacement(both)</p>
-        <p>$300.00</p>
+    <div class="grid-container d-flex">
+        <p class="grid-item" id="name">fork seal replacement(both)</p>
+        <p class="grid-item" id="price">$300.00</p>
     </div>
     <div class="text-light border border-top-0 border-left-0 border-right-0 mb-3"><h3>Fuel System</h3></div>
-    <div class="d-flex">
-        <p id="name">Carb Clean/Fuel Flush - ATV, Dirt Bike, SXS</p>
-        <p>$135.00 - $180.00</p>
+    <div class="grid-container d-flex">
+        <p class="grid-item" id="name">Carb Clean/Fuel Flush - ATV, Dirt Bike, SXS</p>
+        <p class="grid-item" id="price">$135.00 - $180.00</p>
     </div>
-    <div class="d-flex">
-        <p id="name">Carb Clean/Fuel Flush - Cruiser</p>
-        <p>$300.00</p>
+    <div class="grid-container d-flex">
+        <p class="grid-item" id="name">Carb Clean/Fuel Flush - Cruiser</p>
+        <p class="grid-item" id="price">$300.00</p>
     </div>
-    <div class="d-flex">
-        <p id="name">Carb Clean/Fuel Flush - Sport Bike</p>
-        <p>$450.00</p>
+    <div class="grid-container d-flex">
+        <p class="grid-item" id="name">Carb Clean/Fuel Flush - Sport Bike</p>
+        <p class="grid-item" id="price">$450.00</p>
     </div>
     <div class="text-light border border-top-0 border-left-0 border-right-0 mb-3"><h3>Body Damage</h3></div>
-    <div class="d-flex">
-        <p id="name">Collision estimate only</p>
-        <p>$200.00</p>
+    <div class="grid-container d-flex">
+        <p class="grid-item" id="name">Collision estimate only</p>
+        <p class="grid-item" id="price">$200.00</p>
     </div>
 </div>
 <div class="footer">
-    <div class="container_12">
-        <div class="grid_4">
+    <div>
+        <div>
             <p class="footer-text">
                 <b>Address</b>
                 <br> 301 N Main St
@@ -164,13 +191,6 @@
                 <b>Contact</b>
                 <br> Call 555.555.1234
                 <br> to set up a service appointment.
-            </p>
-        </div>
-        <div class="grid_12">
-            <h2>About Us</h2>
-            <p>
-                Welcome to Diamond Motors, the place where you can get the best deal on any Honda, Yamaha, Kawasaki, and Harley vehicles
-                to fit your needs.
             </p>
         </div>
         <div>
@@ -202,10 +222,17 @@
             </ol>
 
         </div>
+        <div>
+            <h2>About Us</h2>
+            <p>
+                Welcome to Diamond Motors, the place where you can get the best deal on any Honda, Yamaha, Kawasaki, and Harley vehicles
+                to fit your needs.
+            </p>
+        </div>
     </div>
 
-    <div class=" container_12 ">
-        <p class="grid_12 ">
+    <div class="container">
+        <p>
             <a href="">Legal Information</a> |
             <a href="">Privacy Policy</a> |
             <a href="">Copyright</a>
