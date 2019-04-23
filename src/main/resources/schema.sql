@@ -5,8 +5,10 @@ CREATE TABLE IF NOT EXISTS bike (
     image Text,
     price INTEGER,
     name TEXT,
+    email TEXT,
+    phone TEXT,
     description TEXT,
-    date TEXT,
+    date VARCHAR,
     year Text,
     city TEXT,
     state TEXT,
@@ -20,6 +22,6 @@ CREATE TABLE IF NOT EXISTS review (
     id UUID PRIMARY KEY,
     name TEXT,
     rating FLOAT,
-    date TEXT,
+    date VARCHAR,
     review TEXT
 );

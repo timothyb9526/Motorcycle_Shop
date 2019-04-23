@@ -1,57 +1,4 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>
-        Motorcycle Club
-    </title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="/css/newBike.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/css/home.css">
-</head>
-
-<body>
-
-<nav  class="navbar navbar-expand-lg sticky-top">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="container collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <div class="d-flex">
-
-                <li class="nav-item active">
-                    <p><a class="nav-link" href="/Honda">Honda <span class="seperator">|</span><span class="sr-only">(current)</span></a></p>
-                </li>
-
-                <li class="nav-item">
-                    <p><a class="nav-link" href="/Kawasaki">Kawasaki <span class="seperator">|</span></a></p>
-                </li>
-                <li class="nav-item">
-                    <p><a class="nav-link" href="/Harley">Harley <span class="seperator">|</span></a></p>
-                </li>
-                <li class="nav-item">
-                    <p><a class="nav-link" href="/Yamaha">Yamaha <span class="seperator">|</span></a></p>
-                </li>
-
-            </div>
-        </ul>
-    </div>
-</nav>
-
-<div id="image" class="container-lg">
-    <div class="container">
-
-        <span class="mx-auto"><img src="pictures/images.png" alt="Bowles Honda" /></span>
-
-    </div>
-</div>
-
+{{> header}}
 <div id="page">
 
     <div id="list">
@@ -101,9 +48,15 @@
                 <label for="name">Name:</label>
                 <input type="text" name="name" class="form-control" required>
             </div>
-            <div class="form-group">
-                <label for="rating">Rating:</label>
-                <input type="number" step=".1" max="5" name="rating" class="form-control" required>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="date">Current Date:</label>
+                    <input type="date" name="date" class="form-control" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="rating">Rating:</label>
+                    <input type="number" step=".1" max="5" name="rating" class="form-control" required>
+                </div>
             </div>
             <div class="form-group">
                 <label for="review">Review:</label>
@@ -115,69 +68,4 @@
 
 
 </div>
-<div class="footer">
-    <div>
-        <div>
-            <p class="footer-text">
-                <b>Address</b>
-                <br> 301 N Main St
-                <br> Water Valley, MS 38965
-            </p>
-            <p class="footer-text">
-                <b>Contact</b>
-                <br> Call 555.555.1234
-                <br> to set up a service appointment.
-            </p>
-        </div>
-        <div>
-
-            <ol id="navigation">
-                <li>
-                    <a href="/" class="on">Home</a>
-                </li>
-                <br>
-                <li>
-                    <a href="/newShowcase">New Showcase</a>
-                </li>
-                <br>
-                <li>
-                    <a href="/inventory">Inventory</a>
-                </li>
-                <br>
-                <li>
-                    <a href="/services">Services</a>
-                </li>
-                <br>
-                <li>
-                    <a href="/BikeForSale">Sell your bike</a>
-                </li>
-                <br>
-                <li>
-                    <a href="/SubmitReview">Submit a Review</a>
-                </li>
-            </ol>
-
-        </div>
-        <div>
-            <h2>About Us</h2>
-            <p>
-                Welcome to Diamond Motors, the place where you can get the best deal on any Honda, Yamaha, Kawasaki, and Harley vehicles
-                to fit your needs.
-            </p>
-        </div>
-    </div>
-
-    <div class="container">
-        <p>
-            <a href="">Legal Information</a> |
-            <a href="">Privacy Policy</a> |
-            <a href="">Copyright</a>
-        </p>
-    </div>
-</div>
-</body>
-<script src="/js/javascript.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</html>
+{{> footer}}

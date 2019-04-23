@@ -39,12 +39,17 @@ public class Bike {
     public Integer mileage;
     @NotNull
     public String condition;
+    @NotNull
+    public String email;
+    @NotNull
+    public String phone;
 
 
 
-    public Bike(UUID id, String brand, String type, String image, Integer price, String name, String description, String date, String year, String city, String state, String color, int mileage, String condition) {
 
-        String pattern = "dd-MM-yyyy";
+    public Bike(UUID id, String brand, String type, String image, Integer price, String name, String description, String email, String phone, String date, String year, String city, String state, String color, int mileage, String condition) {
+
+        String pattern = "dd-MM-yyyy HH:mm:ss";
         String dateInString = new SimpleDateFormat(pattern).format(new Date());
 
         this.id = id;
@@ -54,7 +59,9 @@ public class Bike {
         this.price = price;
         this.name = name;
         this.description = description;
-        this.date = dateInString;
+        this.email = email;
+        this.phone = phone;
+        this.date = date;
         this.year = year;
         this.city = city;
         this.state = state;

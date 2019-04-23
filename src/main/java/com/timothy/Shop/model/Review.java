@@ -32,7 +32,7 @@ public class Review {
         this.name = name;
         this.review = review;
         this.rating = rating;
-        this.date = dateInString;
+        this.date = date;
 
     }
 }

@@ -1,8 +1,13 @@
 #Form {
     color: black;
     padding: 3rem;
-    width: 30%;
     margin-top: 2rem;
+    padding: 5%;
+    margin-left: 25%;
+    width: 50%;
+}
+#Form *{
+    color: black;
 }
 
 input {

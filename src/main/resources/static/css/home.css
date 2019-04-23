@@ -19,7 +19,7 @@ img {
     width: 100%;
 }
 #image div {
-    padding-left: 33%;
+    padding-left: 27%;
 }
 body {
     color: white;
@@ -98,6 +98,7 @@ ol {
     text-align: right;
 }
 .footer {
+    width: 101.5%;
     color: white;
     margin-top: 50px;
     clear: both;
@@ -106,6 +107,7 @@ ol {
 }
 #bikes {
     text-align: center;
+    margin-left: 1%;
 }
 #dropdown, .dropdown {
     margin-left: 33rem;
@@ -129,9 +131,10 @@ ol {
     margin: 0;
 }
 .navigation {
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-wrap: wrap;
+    margin-left: 9%;
 }
 
 #list {
@@ -142,14 +145,6 @@ ol {
 }
 #menu {
     display: none;
-}
-#Form {
-    padding: 5%;
-    margin-left: 25%;
-    width: 50%;
-}
-#Form *{
-    color: black;
 }
 @media only screen and (max-width: 1400px) {
     #page {
@@ -292,6 +287,11 @@ ol {
 @media only screen and (min-width: 350px) {
     .dropdown {
         margin-left: 10%;
+    }
+}
+@media only screen and (max-width: 320px) {
+    #image div {
+        padding: 10%;
     }
 }
 @media only screen and (min-width: 350px) and (max-width: 1400px) {
