@@ -96,6 +96,9 @@ p {
     background-color: #edb4e2;
     color: black;
 }
+.footer-text * {
+    color: black;
+}
 ol {
     list-style: lower-roman;
     text-align: right;
