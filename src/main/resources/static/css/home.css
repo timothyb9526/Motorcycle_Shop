@@ -21,6 +21,10 @@ img {
 #image div {
     padding-left: 27%;
 }
+#reviews {
+    margin-left: 41%;
+    width: 50%;
+}
 body {
     color: white;
     font-size: 80%;
@@ -121,6 +125,12 @@ ol {
   padding: 10px;
   padding-left: 0;
 }
+#contact {
+     display: grid;
+     grid-template-columns: auto auto;
+     padding: 10px;
+     padding-left: 0;
+}
 .grid-item {
   border: 1px solid rgba(0, 0, 0, 0.8);
   font-size: 20px;
@@ -145,6 +155,20 @@ ol {
 }
 #menu {
     display: none;
+}
+fieldset {
+  display: block;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-top: 0.35em;
+  padding-bottom: 0.625em;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+legend {
+    width: 9rem;
 }
 @media only screen and (max-width: 1400px) {
     #page {
@@ -284,6 +308,14 @@ ol {
         padding-left: 20%;
     }
 }
+@media only screen and (max-width: 484px) {
+    #contact{
+        grid-template-columns: auto;
+    }
+    #detail h1{
+       font-size: 250%;
+    }
+}
 @media only screen and (min-width: 350px) {
     .dropdown {
         margin-left: 10%;
@@ -292,6 +324,10 @@ ol {
 @media only screen and (max-width: 320px) {
     #image div {
         padding: 10%;
+    }
+    #reviews {
+        margin: 0;
+        width: 100%;
     }
 }
 @media only screen and (min-width: 350px) and (max-width: 1400px) {

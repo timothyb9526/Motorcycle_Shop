@@ -41,98 +41,111 @@
     </div>
 </div>
 <div class="container">
-    <div id="Form" class="container border border-dark rounded bg-white">
+    <div id="Form" class="border border-dark rounded w-100 m-0" style="background-color: #f5efec;">
         <form action="/inventory" method="POST">
-            <div class="form-group">
-                <label for="image">Image:</label>
-                <input type="text" name="image" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="brand">Brand:</label>
-                <select name="brand" id="brand" class="form-control" required>
-                    <option selected="selected">Honda</option>
-                    <option>Kawasaki</option>
-                    <option>Harley</option>
-                    <option>Yamaha</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="type">Type:</label>
-                <select name="type" id="mySelect" class="form-control" required>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="year">Year:</label>
-                <input type="text" name="year" class="form-control" required>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-5">
-                    <label for="city">City:</label>
-                    <input name="city" type="text" class="form-control" id="City" required>
+            <fieldset><legend>Bike Info</legend>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="image">Image:</label>
+                        <input type="url" name="image" class="form-control" required>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="year">Year:</label>
+                        <input type="text" name="year" class="form-control" required>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="color">Color:</label>
+                        <input type="text" name="color" class="form-control" required>
+                    </div>
                 </div>
-                <div class="form-group col-md-3">
-                    <label for="state">State:</label>
-                    <select name="state" id="state" class="form-control" required>
-                        <option selected>MS.</option>
-                        <option>AL.</option>
-                        <option>MT.</option>
-                        <option>TN.</option>
-                        <option>KS.</option>
-                        <option>CA.</option>
-                        <option>IL.</option>
-                        <option>MI.</option>
-                        <option>TX.</option>
-                        <option>LA.</option>
-                        <option>FL.</option>
-                        <option>WV.</option>
-                        <option>ND.</option>
-                        <option>SD.</option>
-                        <option>WY.</option>
-                        <option>WA.</option>
-                        <option>ID.</option>
-                        <option>MO.</option>
-                        <option>PA.</option>
-                        <option>AK.</option>
-                    </select>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="brand">Brand:</label>
+                        <select name="brand" id="brand" class="form-control" required>
+                            <option selected="selected">Honda</option>
+                            <option>Kawasaki</option>
+                            <option>Harley</option>
+                            <option>Yamaha</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="type">Type:</label>
+                        <select name="type" id="mySelect" class="form-control" required>
+                        </select>
+                    </div>
                 </div>
-                <div class="form-group col-md-4">
-                    <label for="date">Current Date:</label>
-                    <input type="date" name="date" class="form-control" required>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="mileage">Mileage:</label>
+                        <input type="number" name="mileage" class="form-control" required>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="condition">Condition:</label>
+                        <input type="text" name="condition" class="form-control" required>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="price">Price:</label>
+                        <input type="number" name="price" class="form-control" required>
+                    </div>
                 </div>
-            </div>
-            <div class="form-group">
-                <label for="color">Color:</label>
-                <input type="text" name="color" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="mileage">Mileage:</label>
-                <input type="number" name="mileage" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="condition">Condition:</label>
-                <input type="text" name="condition" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="price">Price:</label>
-                <input type="number" name="price" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="name">Full Name:</label>
-                <input type="text" name="name" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="email">E-mail:</label>
-                <input type="emial" name="email" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="phone">Phone Number:</label>
-                <input type="text" name="phone" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="description">Description:</label>
-                <textarea name="description" class="form-control" required></textarea>
-            </div>
-            <button class="btn" type="submit">Submit</button>
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <textarea name="description" class="form-control" required></textarea>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Seller Info</legend>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="name">Full Name:</label>
+                        <input type="text" name="name" class="form-control" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="phone">Phone Number:</label>
+                        <input type="text" name="phone" class="form-control" maxlength="10" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" class="form-control" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-5">
+                        <label for="city">City:</label>
+                        <input name="city" type="text" class="form-control" id="City" required>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="state">State:</label>
+                        <select name="state" id="state" class="form-control" required>
+                            <option selected>MS.</option>
+                            <option>AL.</option>
+                            <option>MT.</option>
+                            <option>TN.</option>
+                            <option>KS.</option>
+                            <option>CA.</option>
+                            <option>IL.</option>
+                            <option>MI.</option>
+                            <option>TX.</option>
+                            <option>LA.</option>
+                            <option>FL.</option>
+                            <option>WV.</option>
+                            <option>ND.</option>
+                            <option>SD.</option>
+                            <option>WY.</option>
+                            <option>WA.</option>
+                            <option>ID.</option>
+                            <option>MO.</option>
+                            <option>PA.</option>
+                            <option>AK.</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="date">Current Date:</label>
+                        <input type="date" name="date" class="form-control" required>
+                    </div>
+                </div>
+            </fieldset>
+            <button class="btn mt-3" type="submit">Submit</button>
         </form>
     </div>
 </div>
