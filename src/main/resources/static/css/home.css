@@ -22,7 +22,6 @@ img {
     padding-left: 27%;
 }
 #reviews {
-    margin-left: 41%;
     width: 50%;
 }
 body {
@@ -308,6 +307,12 @@ legend {
         padding-left: 20%;
     }
 }
+@media only screen and (max-width: 520px) {
+    #reviews {
+        margin: 0;
+        width: 100%;
+    }
+}
 @media only screen and (max-width: 484px) {
     #contact{
         grid-template-columns: auto;
@@ -324,10 +329,6 @@ legend {
 @media only screen and (max-width: 320px) {
     #image div {
         padding: 10%;
-    }
-    #reviews {
-        margin: 0;
-        width: 100%;
     }
 }
 @media only screen and (min-width: 350px) and (max-width: 1400px) {
