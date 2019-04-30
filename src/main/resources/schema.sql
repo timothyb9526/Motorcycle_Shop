@@ -14,7 +14,8 @@ CREATE TABLE IF NOT EXISTS bike (
     state TEXT,
     color TEXT,
     mileage INTEGER,
-    condition TEXT
+    condition TEXT,
+    engine TEXT
 );
 
 

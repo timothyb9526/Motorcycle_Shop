@@ -16,7 +16,7 @@ public class PostgresRepository {
     }
     public void save(Bike bike) {
         bike.id = UUID.randomUUID();
-        jdbc.update("INSERT INTO bike (id, brand, type, image, price, name, description, email, phone, date, year, city, state, color, mileage, condition) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", bike.id, bike.brand, bike.type, bike.image, bike.price, bike.name, bike.description, bike.email, bike.phone, bike.date, bike.year, bike.city, bike.state, bike.color, bike.mileage, bike.condition);
+        jdbc.update("INSERT INTO bike (id, brand, type, image, price, name, description, email, phone, date, year, city, state, color, mileage, condition, engine) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", bike.id, bike.brand, bike.type, bike.image, bike.price, bike.name, bike.description, bike.email, bike.phone, bike.date, bike.year, bike.city, bike.state, bike.color, bike.mileage, bike.condition, bike.engine);
     }
     public List<Bike> findAll() {
         return jdbc.query("SELECT * FROM bike ORDER BY name ASC", this::mapRowToStory);
@@ -46,6 +46,6 @@ public class PostgresRepository {
     }
     private Bike mapRowToStory(ResultSet rs, int rowNum) throws SQLException {
         return new Bike(UUID.fromString(rs.getString("id")), rs.getString("brand"), rs.getString("type"), rs.getString("image"),
-                rs.getInt("price"), rs.getString("name"), rs.getString("description"), rs.getString("email"), rs.getString("phone"), rs.getString("date"), rs.getString("year"), rs.getString("city"), rs.getString("state"), rs.getString("color"), rs.getInt("mileage"), rs.getString("condition"));
+                rs.getInt("price"), rs.getString("name"), rs.getString("description"), rs.getString("email"), rs.getString("phone"), rs.getString("date"), rs.getString("year"), rs.getString("city"), rs.getString("state"), rs.getString("color"), rs.getInt("mileage"), rs.getString("condition"), rs.getString("engine"));
     }
 }

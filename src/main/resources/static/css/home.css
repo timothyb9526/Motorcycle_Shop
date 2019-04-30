@@ -8,6 +8,11 @@ html {
     margin: 0;
     padding: 0;
 }
+.description {
+    text-align: left;
+    word-break: break-all;
+    word-wrap: break-word;
+}
 a {
     color: white;
 }
