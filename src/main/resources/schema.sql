@@ -14,9 +14,12 @@ CREATE TABLE IF NOT EXISTS bike (
     state TEXT,
     color TEXT,
     mileage INTEGER,
-    condition TEXT,
-    engine TEXT
+    condition TEXT
 );
+
+ALTER TABLE bike
+ADD COLUMN IF NOT EXISTS engine TEXT NOT NULL
+DEFAULT 'not specified';
 
 
 CREATE TABLE IF NOT EXISTS review (
