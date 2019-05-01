@@ -1,1 +1,1 @@
-release: ./mvnw liquibase:update
+release: ./mvnw flyway:migrate
