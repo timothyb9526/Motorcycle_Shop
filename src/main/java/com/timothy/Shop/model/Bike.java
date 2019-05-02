@@ -43,7 +43,9 @@ public class Bike {
     public String phone;
     @NotNull
     public String engine;
-    public Bike(UUID id, String brand, String type, String image, Integer price, String name, String description, String email, String phone, String date, String year, String city, String state, String color, int mileage, String condition, String engine) {
+    @NotNull
+    public String model;
+    public Bike(UUID id, String brand, String type, String image, Integer price, String name, String description, String email, String phone, String date, String year, String city, String state, String color, int mileage, String condition, String engine, String model) {
         String number = phone.replaceFirst("(\\d{3})(\\d{3})(\\d+)", "($1) $2-$3");
         this.id = id;
         this.brand = brand.toLowerCase();
@@ -62,5 +64,6 @@ public class Bike {
         this.mileage = mileage;
         this.condition = condition;
         this.engine = engine;
+        this.model = model;
     }
 }
