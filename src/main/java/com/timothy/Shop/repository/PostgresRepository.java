@@ -38,11 +38,21 @@ public class PostgresRepository {
     }
     public List<Bike> findByBrandPrice(String brand, String price) {
         Integer Price = Integer.parseInt(price);
-        return jdbc.query("SELECT * FROM bike where brand = ? AND price <= ? ORDER BY name ASC", this::mapRowToStory, brand, Price);
+        if (Price > 10000){
+            return jdbc.query("SELECT * FROM bike where brand = ? AND price >= ? ORDER BY name ASC", this::mapRowToStory, brand, Price);
+        }
+        else{
+            return jdbc.query("SELECT * FROM bike where brand = ? AND price <= ? ORDER BY name ASC", this::mapRowToStory, brand, Price);
+        }
     }
     public List<Bike> findByPrice(String price) {
         Integer Price = Integer.parseInt(price);
-        return jdbc.query("SELECT * FROM bike where price <= ? ORDER BY name ASC", this::mapRowToStory, Price);
+        if (Price > 10000){
+            return jdbc.query("SELECT * FROM bike where price >= ? ORDER BY name ASC", this::mapRowToStory, Price);
+        }
+        else{
+            return jdbc.query("SELECT * FROM bike where price <= ? ORDER BY name ASC", this::mapRowToStory, Price);
+        }
     }
     private Bike mapRowToStory(ResultSet rs, int rowNum) throws SQLException {
         return new Bike(UUID.fromString(rs.getString("id")), rs.getString("brand"), rs.getString("type"), rs.getString("image"),
